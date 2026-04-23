@@ -1,5 +1,42 @@
-#Build directory
+# Build directory
 build/
+package/
+release/
+
+# Prerequisites
+*.d
+
+# Linker files
+*.ilk
+
+# Debugger Files
+*.pdb
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Build directories
+build/
+Build/
+build-*/
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+*.swp
+
+# vcpkg
+vcpkg_installed/
+
+# debug information files
+*.dwo
+
+# test output & cache
+Testing/
+.cache/
 
 # Compiled Object files
 *.slo
@@ -18,9 +55,11 @@ build/
 *.so
 *.dylib
 *.dll
+*.so.*
 
 # Fortran module files
 *.mod
+*.smod
 
 # Compiled Static libraries
 *.lai
@@ -28,25 +67,53 @@ build/
 *.a
 *.lib
 
-# Executables
-*.exe
-*.out
-*.app
-*.user
-SavvyCAN
-
-# Generated files
-**/moc_*
-**/ui_*.h
-**/qrc_*.cpp
-.qtc_clangd
-SavvyCAN.pro.user.*
-.qmake.stash
-Makefile
-
 # Editor files
 *.code-workspace
-SavvyCAN.pro.qtds
 .xcode
 SavvyCAN.xcodeproj
 .vscode
+
+# Qt-es
+object_script.*.Release
+object_script.*.Debug
+*_plugin_import.cpp
+/.qmake.cache
+/.qmake.stash
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.moc
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.qmlc
+*.jsc
+Makefile*
+*build-*
+build/
+*.qm
+*.prl
+*.qmlls.ini
+
+# Qt unit tests
+target_wrapper.*
+
+# QtCreator
+*.autosave
+
+# QtCreator Qml
+*.qmlproject.user
+*.qmlproject.user.*
+
+# QtCreator CMake
+CMakeLists.txt.user*
+
+# QtCreator 4.8< compilation database
+compile_commands.json
+
+# QtCreator local machine specific files for imported projects
+*creator.user*
+
+*_qmlcache.qrc
