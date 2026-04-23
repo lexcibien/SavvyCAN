@@ -388,15 +388,6 @@ void LAWICELSerial::serialError(QSerialPort::SerialPortError err)
         killConnection = true;
         piStop();
         break;
-    case QSerialPort::ParityError:
-        errMessage = "Parity error on serial port";
-        break;
-    case QSerialPort::FramingError:
-        errMessage = "Framing error on serial port";
-        break;
-    case QSerialPort::BreakConditionError:
-        errMessage = "Break error on serial port";
-        break;
     case QSerialPort::WriteError:
         errMessage = "Write error on serial port";
         piStop();
@@ -486,7 +477,7 @@ void LAWICELSerial::readSerialData()
         //qDebug() << c << "    " << QString::number(c, 16) << "     " << QString(c);
         debugBuild = debugBuild % QString::number(c, 16).rightJustified(2,'0') % " ";
         //procRXChar(c);
-        mBuildLine.append(c);
+        mBuildLine.append(QChar(c));
         if (c == 13) //all lawicel commands end in CR
         {
             qDebug() << "Got CR!";
