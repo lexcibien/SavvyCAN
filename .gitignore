@@ -3,6 +3,9 @@
 package/
 release/
 
+# macOS Files
+.DS_Store
+
 # Prerequisites
 *.d
 

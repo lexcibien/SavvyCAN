@@ -21,6 +21,7 @@ TARGET = SavvyCAN
 TEMPLATE = app
 
 QMAKE_INFO_PLIST = Info.plist.template
+QMAKE_CXXFLAGS += -include arm_acle.h
 ICON = icons/SavvyIcon.icns
 
 SOURCES += main.cpp\
